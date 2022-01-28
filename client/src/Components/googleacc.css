@@ -1,0 +1,23 @@
+.LoginDialog {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    padding: 10%;
+    align-items: center;
+}
+
+.LoginTitle {
+    font-weight: 800;
+    font-family: "Playfair Display", sans-serif;
+    margin-bottom: 30%;
+    font-size: 3rem;
+}
+.LoginSubtitle{
+padding: 15%;
+}
+
+.LoginSubtitle span{
+    font-weight: bold;
+    color: green;
+}

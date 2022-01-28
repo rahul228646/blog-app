@@ -1,0 +1,26 @@
+.topbar{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+}
+.logo {
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1rem;
+}
+.links {
+    display: inline-flex;
+    justify-content: flex-end;
+    min-width: 15%;
+    column-gap: 20px;
+    font-size: 0.875rem;
+    /* column-gap: 10%; */
+
+}

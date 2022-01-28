@@ -1,0 +1,53 @@
+.Post{
+
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10%;
+    
+}
+.PostTitle {
+    font-family: 'Martel Sans', serif;
+    font-size: 46px;
+    font-weight: 900;
+    color: rgb(41, 41, 41);
+}
+
+.PostInfo {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(117, 117, 117);
+    font-size: 22px;
+}
+
+.PostImage {
+    padding: 5% 0 5% 0;
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+}
+
+.PostContent {
+  
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 21px;
+    color: rgba(0,0,0,0.8);
+}
+
+.PostContent:first-letter {
+    margin-left: 2%;
+    font-weight: 400;
+    font-size: 40px;
+    color: rgba(0,0,0,0.8);
+}
+
+@media screen and (max-width: 1000px) {
+    .PostImage {
+        height: 100%;
+        padding-bottom: 4%;
+    }
+
+}
