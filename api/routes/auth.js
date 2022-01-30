@@ -3,7 +3,7 @@ const passport = require("passport");
 
 const CLIENT_URL = "http://localhost:3000/";
 
-router.get("/", (req, res) => {
+router.get("/login/success", (req, res) => {
   if (req.user) {
     res.status(200).json({
       success: true,
@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
   console.log(res);
 });
 
-router.get("/", (req, res) => {
+router.get("/login/failure", (req, res) => {
   res.status(401).json({
     success: false,
     message: "failure",
