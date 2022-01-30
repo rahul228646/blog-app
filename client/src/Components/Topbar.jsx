@@ -119,8 +119,6 @@
 
 import React, { Component } from 'react';
 import '../Components/topbar.css'
-import GetStarted from './GetStarted'
-import SignIn from './SignIn'
 import Button from '@mui/material/Button';
 import {Link} from "react-router-dom";
 
@@ -135,13 +133,14 @@ export default class Topbar extends Component {
         <Link className='link' to='./'>LOGO</Link>  
         </div>
         <div className='links'>
-        <Link className='link' to='./blog'>SCIENCE</Link>   
-        {!user && <GetStarted/> }
+        <Link className='link' to='./blog'>SCIENCE</Link>
+        <Link className='link' to='./login'>SIGN IN</Link>   
+        {/* {!user && <GetStarted/> }
         {!user && <SignIn/>}
         {user &&  <Button variant="none" disableFocusRipple disableRipple
                     sx={{borderRadius:'20px', color:"white", padding:'inherit'}}
             >LOGOUT</Button>}
-         
+          */}
         </div>
     </div>
     )

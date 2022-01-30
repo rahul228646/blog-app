@@ -5,7 +5,7 @@
         height: 70%;
     }
     .headerTitle {
-        font-family: Playfair Display;
+        font-family: "Playfair Display";
         font-weight: 600;
         font-size: 5rem;
         display: flex;

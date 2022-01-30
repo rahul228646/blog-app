@@ -1,9 +1,10 @@
 const express = require("express");
 const passport = require("passport");
-const cookieSession = require("cookie-session");
-const authRoute = require("./routes/auth");
-const passportSetup = require("./passport");
 const cors = require("cors");
+const passportSetup = require("./passport");
+const cookieSession = require("cookie-session");
+
+const authRoute = require("./routes/auth");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");

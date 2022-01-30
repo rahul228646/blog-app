@@ -1,0 +1,50 @@
+.login-page{
+    /* background-color: #0D1117;
+    color: #C9D1D9; */
+    /* height: 100vh; */
+    padding-top: 8rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playfair Display';
+}
+
+.title {
+    font-size: 40px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.login-area {
+    /* background-color: #161B22; */
+    width: 20rem;
+    height: 40%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.register-area {
+    /* border: 2px solid #161B22; */
+    width: 20rem;
+    height: 4rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+.redirect {
+    margin-left: 4px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: rgb(92, 161, 22);
+    font-weight: 600;
+}
