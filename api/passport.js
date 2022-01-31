@@ -14,6 +14,11 @@ passport.use(
     },
     function (accessToken, refreshToken, profile, done) {
       // console.log(profile);
+      new User({
+        username : profile.displayName,
+        email : profile.id,
+        profilePic: profile.photos[0].value,
+      }).save();
       done(null, profile);
     }
   )

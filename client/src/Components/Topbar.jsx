@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 
 
 export default function Topbar({user}) {
+  console.log(user);
   const logout = () => {
     window.open("http://localhost:4000/auth/logout", "_self");
   }; 
@@ -23,6 +24,11 @@ export default function Topbar({user}) {
               sx={{borderRadius:'20px', color:"white", padding:'inherit'}}
               onClick={logout}
       >LOGOUT</Button>}
+  {user &&  <img
+              src={user.photos[0].value}
+              alt=""
+              className="avatar"
+            />}    
    
   </div>
 </div>);
