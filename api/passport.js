@@ -14,11 +14,20 @@ passport.use(
     },
     function (accessToken, refreshToken, profile, done) {
       // console.log(profile);
-      new User({
-        username : profile.displayName,
-        email : profile.id,
-        profilePic: profile.photos[0].value,
-      }).save();
+      User.findOne({googleID : profile.id}).then((currentUser)=>{
+        if(currentUser) {
+          console.log("old user");
+        }
+        else {
+          console.log("new user");
+          new User({
+            username : profile.displayName,
+            googleID : profile.id,
+            profilePic: profile.photos[0].value,
+          }).save();
+        }
+      });
+      
       done(null, profile);
     }
   )
