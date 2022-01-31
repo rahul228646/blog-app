@@ -10,40 +10,39 @@ import { CardActionArea } from '@mui/material';
 import './header/header.css'
 import {Link} from "react-router-dom";
 
-class PostCard extends Component {
-    render() {
-        return (
-                    <Grid item sm={12} md={6} padding={5}>
-                        <Card >
-                            <CardActionArea component={Link} to="/singlepost">
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image='https://miro.medium.com/max/1400/1*Zxu0yIEh2R0kYqDAznv9SQ.jpeg'
-                                    alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Grid container>
-                                        <Grid item xs={12}><Typography gutterBottom variant="h5" component="div">
-                                            Interesting Title
-                                        </Typography>
-                                        </Grid>
-                                        <Grid item xs={6}>
-                                            <Typography gutterBottom variant="subtitle1" component="div">
-                                                author
-                                            </Typography>
-                                        </Grid>
-                                    </Grid>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                                        species, ranging across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-        );
-    }
-}
 
-export default PostCard;
+
+
+export default function PostCard(props) {
+    
+
+  return( <Grid item sm={12} md={6} padding={5}>
+    <Card >
+        <CardActionArea component={Link} to={`/posts/${props.id}`}>
+            {props.image && 
+            <CardMedia
+                component="img"
+                height="140"
+                image= {props.image}
+                alt="green iguana"
+            /> }
+            <CardContent>
+                <Grid container>
+                    <Grid item xs={12}><Typography gutterBottom variant="h5" component="div">
+                    {props.title.charAt(0).toUpperCase() + props.title.slice(1)}
+                    </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Typography gutterBottom variant="subtitle1" component="div">
+                        Author : {props.username}
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Typography variant="body2" color="text.secondary">
+                 {props.desc}
+                </Typography>
+            </CardContent>
+        </CardActionArea>
+    </Card>
+</Grid>);
+}

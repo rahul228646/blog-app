@@ -20,6 +20,7 @@ class Header extends Component {
                         <img
                             src={img}
                             className='headerImage'
+                            alt=''
                         />
                     </Grid>
                     <Grid item md={6} sm={6} xs={12} className='headerTitle' sx={{color:'white', display: 'flex'}}>

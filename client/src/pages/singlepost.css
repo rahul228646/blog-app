@@ -15,6 +15,10 @@
     color: rgb(41, 41, 41);
 }
 
+.PostTitle::first-letter {
+    text-transform: uppercase;
+}
+
 .PostInfo {
     display: flex;
     justify-content: space-between;
@@ -42,6 +46,7 @@
     font-weight: 400;
     font-size: 40px;
     color: rgba(0,0,0,0.8);
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 1000px) {

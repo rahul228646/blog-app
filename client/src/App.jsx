@@ -45,7 +45,7 @@ function App() {
       <Topbar user={user}/>
       <Routes>
       <Route exact path="/" element={<Home/>}/>
-      <Route exact path="/singlepost" element={<SinglePost/>}/>
+      <Route exact path="/posts/:id" element={<SinglePost/>}/>
       <Route exact path="/blog" element={ <BlogTopic/>}/>
       </Routes>
     </div>
